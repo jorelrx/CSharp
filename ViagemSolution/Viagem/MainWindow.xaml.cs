@@ -27,7 +27,10 @@ namespace Viagem
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Via v = new Via();
+            v.SetDistancia(double.Parse(d.Text));
+            v.SetTempo(double.Parse(t.Text));
+            vel.Text = v.CalcVelocidad().ToString();
         }
     }
 }
