@@ -1,0 +1,19 @@
+﻿<Window x:Class="Viagem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Viagem"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="300">
+    <Grid>
+        <Label Content="Distância - Km" HorizontalAlignment="Left" Margin="35,19,0,0" VerticalAlignment="Top"/>
+        <Label Content="Tempo - h" HorizontalAlignment="Left" Margin="176,19,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="35,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="87"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="176,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="87"/>
+        <Button Content="Calcular" HorizontalAlignment="Left" Height="42" Margin="35,90,0,0" VerticalAlignment="Top" Width="228" Click="Button_Click"/>
+        <Label Content="Velocidade - Km/h" HorizontalAlignment="Left" Margin="35,142,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="35,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="228"/>
+
+    </Grid>
+</Window>
