@@ -27,7 +27,11 @@ namespace Retângulo
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Retangulo retan = new Retangulo();
+            retan.SetBase(double.Parse(bas.Text));
+            retan.SetAltura(double.Parse(altura.Text));
+            area.Text = retan.CalcArea().ToString();
+            diag.Text = retan.CalcDiag().ToString();
         }
     }
 
