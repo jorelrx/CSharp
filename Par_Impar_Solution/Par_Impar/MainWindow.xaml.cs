@@ -24,5 +24,23 @@ namespace Par_Impar
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+    }
+    class Numeros
+    {
+        private int inicio, fim;
+        public void Numeros(int inicio, int fim)
+        {
+            this.inicio = inicio;
+            this.fim = fim;
+        }
+        public int[] Calcular(bool p, bool i)
+        {
+            return
+        }
     }
 }
