@@ -27,20 +27,31 @@ namespace Par_Impar
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Numeros num = new Numeros(int.Parse(inicio.Text), int.Parse(fim.Text));
+            listbox.ItemsSource = num.Calcular(cbP.IsChecked.Value, cbI.IsChecked.Value);
         }
     }
     class Numeros
     {
         private int inicio, fim;
-        public void Numeros(int inicio, int fim)
+        public Numeros(int inicio, int fim)
         {
             this.inicio = inicio;
             this.fim = fim;
         }
         public int[] Calcular(bool p, bool i)
         {
-            return
+            int[] vet = new int[fim];
+            int cont = 0;
+            for (int k = inicio; k <= fim; k++)
+            {
+                if (p == true && i == false && k % 2 == 0) vet[cont++] = k;
+                if (p == false && i == true && k % 2 != 0) vet[cont++] = k;
+                if (p == true && i == true) vet[cont++] = k;
+            }
+            int[] retornar = new int[cont];
+            Array.Copy(vet, retornar, cont);
+            return retornar;
         }
     }
 }
