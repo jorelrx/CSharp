@@ -43,12 +43,17 @@ namespace Historico
               h.Excluir(materias.SelectedIndex);
             materias.ItemsSource = h.Listar();
         }
+
+        private void Button_Ira(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(h.CalcIra().ToString());
+        }
     }
     class Historic
     {
-        string aluno;
-        Disciplina[] disc = new Disciplina[10];
-        int cont = 0;
+        private string aluno;
+        private Disciplina[] disc = new Disciplina[10];
+        private int cont = 0;
         public Historic()
         {
 
@@ -77,10 +82,8 @@ namespace Historico
         {
             double ira = 0;
             Disciplina[] d = Listar();
-            foreach(Disciplina di in d)
-            {
-                ira += di.GetMedia();
-            }
+            foreach(Disciplina di in d) ira += di.GetMedia();
+            ira /= cont;
             return ira;
         }
     }
