@@ -36,6 +36,13 @@ namespace Historico
             h.Inserir(d);
             materias.ItemsSource = h.Listar();
         }
+
+        private void Button_Excluir(object sender, RoutedEventArgs e)
+        {
+            if  (materias.SelectedIndex != -1)
+              h.Excluir(materias.SelectedIndex);
+            materias.ItemsSource = h.Listar();
+        }
     }
     class Historic
     {
@@ -53,6 +60,12 @@ namespace Historico
         public void Inserir(Disciplina d)
         {
             disc[cont++] = d;
+        }
+        public void Excluir(int x)
+        {
+            for (int i = x; i < cont-1; i++)
+                disc[i] = disc[i + 1];
+            cont--;
         }
         public Disciplina[] Listar()
         {

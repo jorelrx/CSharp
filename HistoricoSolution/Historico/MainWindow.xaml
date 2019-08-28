@@ -28,7 +28,7 @@
         </GroupBox>
         <Button Content="Aluno" HorizontalAlignment="Left" Height="24" Margin="10,196,0,0" VerticalAlignment="Top" Width="73" Click="Button_Aluno"/>
         <Button Content="Inserir" HorizontalAlignment="Left" Height="24" Margin="100,196,0,0" VerticalAlignment="Top" Width="73" Click="Button_Inserir"/>
-        <Button Content="Excluir" HorizontalAlignment="Left" Height="24" Margin="190,196,0,0" VerticalAlignment="Top" Width="73"/>
+        <Button Content="Excluir" HorizontalAlignment="Left" Height="24" Margin="190,196,0,0" VerticalAlignment="Top" Width="73" Click="Button_Excluir"/>
         <Button Content="IRA" HorizontalAlignment="Left" Height="24" Margin="280,196,0,0" VerticalAlignment="Top" Width="73"/>
         <ListBox x:Name="materias" HorizontalAlignment="Left" Height="102" Margin="10,241,0,0" VerticalAlignment="Top" Width="472"/>
 
