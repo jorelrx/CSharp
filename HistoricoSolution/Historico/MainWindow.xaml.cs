@@ -24,5 +24,71 @@ namespace Historico
         {
             InitializeComponent();
         }
+        Historic h;
+        private void Button_Aluno(object sender, RoutedEventArgs e)
+        {
+            h = new Historic(aluno.Text);
+        }
+
+        private void Button_Inserir(object sender, RoutedEventArgs e)
+        {
+            Disciplina d = new Disciplina(nome.Text, semestre.Text, int.Parse(media.Text), cbA.IsChecked.Value);
+            h.Inserir(d);
+            materias.ItemsSource = h.Listar();
+        }
+    }
+    class Historic
+    {
+        string aluno;
+        Disciplina[] disc = new Disciplina[10];
+        int cont = 0;
+        public Historic()
+        {
+
+        }
+        public Historic(string aluno)
+        {
+            this.aluno = aluno;
+        }
+        public void Inserir(Disciplina d)
+        {
+            disc[cont++] = d;
+        }
+        public Disciplina[] Listar()
+        {
+            Disciplina[] d = new Disciplina[cont];
+            Array.Copy(disc, d, cont);
+            return d;
+        }
+        public double CalcIra()
+        {
+            double ira = 0;
+            Disciplina[] d = Listar();
+            foreach(Disciplina di in d)
+            {
+                ira += di.GetMedia();
+            }
+            return ira;
+        }
+    }
+
+    class Disciplina
+    {
+        private string nome, semestre;
+        private int media;
+        private string situacao;
+        public Disciplina(string nome, string semestre, int media, bool situacao)
+        {
+            this.nome = nome;
+            this.semestre = semestre;
+            this.media = media;
+            if (situacao == true) this.situacao = "Aprovado";
+            else this.situacao = "Reprovado";
+        }
+        public double GetMedia() { return media; }
+        public override string ToString()
+        {
+            return nome + " - " + semestre + " - " + media + " - " + situacao;
+        }
     }
 }
