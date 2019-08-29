@@ -34,6 +34,7 @@ namespace Loja
         {
             Veiculo v = new Veiculo(placa.Text, fabricante.Text, modelo.Text, int.Parse(ano.Text), decimal.Parse(preco.Text), vendido.IsChecked.Value);
             loja.Inserir(v);
+            listBox.ItemsSource = loja.Listar();
         }
 
         private void Button_Listar(object sender, RoutedEventArgs e)
@@ -43,9 +44,19 @@ namespace Loja
 
         private void Button_Vender(object sender, RoutedEventArgs e)
         {
-
+            loja.Excluir(listBox.SelectedIndex);
+            listBox.ItemsSource = loja.Listar();
         }
 
+        private void Button_Total(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(loja.Total().ToString());
+        }
+
+        private void Button_ListarValor(object sender, RoutedEventArgs e)
+        {
+            listBox.ItemsSource = loja.ListarValor(decimal.Parse(limite.Text));
+        }
     }
     class Lojaa
     {
@@ -57,17 +68,36 @@ namespace Loja
         {
             this.v[cont++] = v;
         }
+        public void Excluir(int k)
+        {
+            for (int i = k; i < cont - 1; i++)
+                v[i] = v[i + 1];
+            cont--;
+        }
         public Veiculo[] Listar()
         {
             Veiculo[] veic = new Veiculo[cont];
             Array.Copy(v, veic, cont);
             return veic;
         }
+        public decimal Total()
+        {
+            decimal tot = 0;
+            Veiculo[] v = Listar();
+            foreach (Veiculo ve in v)
+            {
+                if (ve.GetVendido() == false)
+                    tot += ve.GetPreco();
+            }
+            return tot;
+        }
         public Veiculo[] ListarValor(decimal limite)
         {
             int x = 0;
             Veiculo[] veic = new Veiculo[cont];
-            foreach (Veiculo a in Listar()) if (a.GetPreco() <= limite) veic[x++] = a;
+            foreach (Veiculo a in Listar())
+                if (a.GetVendido() == false)
+                    if (a.GetPreco() <= limite) veic[x++] = a;
             Veiculo[] retorno = new Veiculo[x];
             Array.Copy(veic, retorno, x);
             return retorno;
@@ -95,6 +125,10 @@ namespace Loja
         public decimal GetPreco()
         {
             return preco;
+        }
+        public bool GetVendido()
+        {
+            return vendido;
         }
         public override string ToString()
         {

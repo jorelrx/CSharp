@@ -29,17 +29,17 @@
                 <CheckBox x:Name="vendido" Content="Vendido" HorizontalAlignment="Left" Margin="379,38,0,0" VerticalAlignment="Top"/>
             </Grid>
         </GroupBox>
-        <Button Content="Loja" HorizontalAlignment="Left" Height="36" Margin="495,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Loja"/>
-        <Button Content="Inserir" HorizontalAlignment="Left" Height="36" Margin="592,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Inserir"/>
-        <Button Content="Listar" HorizontalAlignment="Left" Height="36" Margin="545,66,0,0" VerticalAlignment="Top" Width="90" Click="Button_Listar"/>
-        <Button Content="Vender" HorizontalAlignment="Left" Height="36" Margin="495,109,0,0" VerticalAlignment="Top" Width="90" Click="Button_Vender"/>
-        <Button Content="Total" HorizontalAlignment="Left" Height="36" Margin="592,109,0,0" VerticalAlignment="Top" Width="90"/>
+        <Button Content="Loja" HorizontalAlignment="Left" Height="36" Margin="487,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Loja"/>
+        <Button Content="Inserir" HorizontalAlignment="Left" Height="36" Margin="584,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Inserir"/>
+        <Button Content="Listar" HorizontalAlignment="Left" Height="36" Margin="537,66,0,0" VerticalAlignment="Top" Width="90" Click="Button_Listar"/>
+        <Button Content="Vender" HorizontalAlignment="Left" Height="36" Margin="487,109,0,0" VerticalAlignment="Top" Width="90" Click="Button_Vender"/>
+        <Button Content="Total" HorizontalAlignment="Left" Height="36" Margin="584,109,0,0" VerticalAlignment="Top" Width="90" Click="Button_Total"/>
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="141" Margin="10,203,0,0" VerticalAlignment="Top" Width="460"/>
-        <GroupBox Header="Pesquisar Veiculos" HorizontalAlignment="Left" Height="168" Margin="495,176,0,0" VerticalAlignment="Top" Width="187">
+        <GroupBox Header="Pesquisar Veiculos" HorizontalAlignment="Left" Height="168" Margin="487,176,0,0" VerticalAlignment="Top" Width="187">
             <Grid>
-                <TextBlock HorizontalAlignment="Left" Margin="50,21,0,0" TextWrapping="Wrap" Text="Valor máximo" VerticalAlignment="Top" Height="20" Width="76"/>
-                <TextBox HorizontalAlignment="Left" Height="29" Margin="34,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="104"/>
-                <Button Content="Pesquisar" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" Width="155" Height="40"/>
+                <TextBlock HorizontalAlignment="Left" Margin="48,21,0,0" TextWrapping="Wrap" Text="Valor máximo" VerticalAlignment="Top" Height="20" Width="76"/>
+                <TextBox x:Name="limite" HorizontalAlignment="Left" Height="29" Margin="30,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="104"/>
+                <Button Content="Pesquisar" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Width="155" Height="40" Click="Button_ListarValor"/>
 
             </Grid>
         </GroupBox>
