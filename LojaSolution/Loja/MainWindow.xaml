@@ -7,6 +7,30 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="500">
     <Grid>
+        <GroupBox Header="Loja" HorizontalAlignment="Left" Height="92" Margin="10,10,0,0" VerticalAlignment="Top" Width="472">
+            <Grid>
+                <TextBlock HorizontalAlignment="Left" Height="18" Margin="10,10,0,0" TextWrapping="Wrap" Text="Nome da loja" VerticalAlignment="Top" Width="82"/>
+                <TextBox x:Name="nome" HorizontalAlignment="Left" Height="23" Margin="10,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="440"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Veiculo" HorizontalAlignment="Left" Height="87" Margin="10,111,0,0" VerticalAlignment="Top" Width="472">
+            <Grid>
+                <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Placa" VerticalAlignment="Top" Height="19" Width="33"/>
+                <TextBlock HorizontalAlignment="Left" Margin="83,10,0,0" TextWrapping="Wrap" Text="Fabricante" VerticalAlignment="Top" Height="19" Width="59"/>
+                <TextBlock HorizontalAlignment="Left" Margin="166,10,0,0" TextWrapping="Wrap" Text="Modelo" VerticalAlignment="Top" Height="19" Width="45"/>
+                <TextBlock HorizontalAlignment="Left" Margin="234,10,0,0" TextWrapping="Wrap" Text="Ano" VerticalAlignment="Top" Height="19" Width="26"/>
+                <TextBlock HorizontalAlignment="Left" Margin="302,10,0,0" TextWrapping="Wrap" Text="Preço" VerticalAlignment="Top" Height="19" Width="34"/>
+                <TextBlock HorizontalAlignment="Left" Margin="381,10,0,0" TextWrapping="Wrap" Text="Vendido" VerticalAlignment="Top" Height="19" Width="48"/>
+                <TextBox x:Name="placa" HorizontalAlignment="Left" Height="21" Margin="10,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="67"/>
+                <TextBox x:Name="fabricante" HorizontalAlignment="Left" Height="21" Margin="82,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="67"/>
+                <TextBox x:Name="modelo" HorizontalAlignment="Left" Height="21" Margin="154,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="67"/>
+                <TextBox x:Name="ano" HorizontalAlignment="Left" Height="21" Margin="228,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67"/>
+                <TextBox x:Name="preco" HorizontalAlignment="Left" Height="21" Margin="300,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67"/>
+                <TextBox x:Name="vendido" HorizontalAlignment="Left" Height="21" Margin="372,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67"/>
+            </Grid>
+        </GroupBox>
         
+
     </Grid>
 </Window>

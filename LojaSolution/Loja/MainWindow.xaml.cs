@@ -42,9 +42,12 @@ namespace Loja
         }
         public Veiculo[] ListarValor(decimal limite)
         {
-            Veiculo[] veic;
-            foreach(Veiculo a in Listar()) if(a.GetPreco() <= limite) 
-            return veic;
+            int x = 0;
+            Veiculo[] veic = new Veiculo[cont];
+            foreach (Veiculo a in Listar()) if (a.GetPreco() <= limite) veic[x++] = a;
+            Veiculo[] retorno = new Veiculo[x];
+            Array.Copy(veic, retorno, x);
+            return retorno;
         }
     }
     class Veiculo
@@ -53,6 +56,15 @@ namespace Loja
         private int ano;
         private decimal preco;
         private bool vendido;
+        public Veiculo(string placa, string fabricante, string modelo, int ano, decimal preco, bool vendido)
+        {
+            this.placa = placa;
+            this.fabricante = fabricante;
+            this.modelo = modelo;
+            this.ano = ano;
+            this.preco = preco;
+            this.vendido = vendido;
+        }
         public void Vender()
         {
             if (vendido != true) vendido = true;
