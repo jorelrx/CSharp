@@ -24,12 +24,35 @@ namespace Loja
         {
             InitializeComponent();
         }
+        Lojaa loja;
+        private void Button_Loja(object sender, RoutedEventArgs e)
+        {
+            loja = new Lojaa(nome.Text);
+        }
+
+        private void Button_Inserir(object sender, RoutedEventArgs e)
+        {
+            Veiculo v = new Veiculo(placa.Text, fabricante.Text, modelo.Text, int.Parse(ano.Text), decimal.Parse(preco.Text), vendido.IsChecked.Value);
+            loja.Inserir(v);
+        }
+
+        private void Button_Listar(object sender, RoutedEventArgs e)
+        {
+            listBox.ItemsSource = loja.Listar();
+        }
+
+        private void Button_Vender(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
-    class Loja
+    class Lojaa
     {
         private string nome;
         private int cont = 0;
         Veiculo[] v = new Veiculo[10];
+        public Lojaa(string nome) { this.nome = nome; }
         public void Inserir(Veiculo v)
         {
             this.v[cont++] = v;
@@ -72,6 +95,13 @@ namespace Loja
         public decimal GetPreco()
         {
             return preco;
+        }
+        public override string ToString()
+        {
+            string vendeu;
+            if (vendido == true) vendeu = "Vendido";
+            else vendeu = "Não vendido";
+            return $"{placa} {fabricante} {modelo} - {ano} - {preco} - {vendeu}";
         }
     }
 }
