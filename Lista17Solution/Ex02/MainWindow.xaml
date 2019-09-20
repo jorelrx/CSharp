@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ex02"
         mc:Ignorable="d"
-        Title="MainWindow" Height="248.054" Width="627.562">
+        Title="MainWindow" Height="255.054" Width="635.562">
     <Grid>
-        <TextBlock Height="29" Width="144" Text="PA" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="229,10,0,0" Background="#FFDDDDDD" Foreground="Black"/>
-        <TextBox Name="txtPa" Height="29" Width="155" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,31,0,0"/>
-        <TextBlock Height="29" Width="144" Text="Fibonacci" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="427,10,0,0" Background="#FFDDDDDD" Foreground="Black"/>
-        <Button Height="29" Width="155" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,143,0,0" Content="Proximo" Click="Proximo"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Razão da P.A." VerticalAlignment="Top"/>
-        <Button Height="29" Width="155" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,94,0,0" Content="Iniciar" Click="Proximo"/>
-        <ListBox HorizontalAlignment="Left" Height="160" Margin="198,47,0,0" VerticalAlignment="Top" Width="201"/>
-        <ListBox HorizontalAlignment="Left" Height="160" Margin="404,47,0,0" VerticalAlignment="Top" Width="201"/>
+        <TextBlock Height="29" Width="144" Text="PA" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="234,15,0,0" Background="#FFDDDDDD" Foreground="Black"/>
+        <TextBox Name="txtPa" Height="29" Width="155" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,36,0,0"/>
+        <TextBlock Height="29" Width="144" Text="Fibonacci" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="432,15,0,0" Background="#FFDDDDDD" Foreground="Black"/>
+        <Button Height="29" Width="155" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,148,0,0" Content="Proximo" Click="Button_Proximo"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,15,0,0" TextWrapping="Wrap" Text="Razão da P.A." VerticalAlignment="Top"/>
+        <Button x:Name="ButtonIniciar" Height="29" Width="155" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,99,0,0" Content="Iniciar" Click="Iniciar"/>
+        <ListBox x:Name="ListPA" HorizontalAlignment="Left" Height="160" Margin="203,52,0,0" VerticalAlignment="Top" Width="201"/>
+        <ListBox x:Name="ListFibo" HorizontalAlignment="Left" Height="160" Margin="409,52,0,0" VerticalAlignment="Top" Width="201"/>
     </Grid>
 </Window>

@@ -25,11 +25,25 @@ namespace Ex02
             InitializeComponent();
         }
 
-        private void Proximo(object sender, RoutedEventArgs e)
-        {
+        PA peA;
+        Fibonacci fibo;
 
+        private void Iniciar(object sender, RoutedEventArgs e)
+        {
+            peA = new PA(int.Parse(txtPa.Text));
+            ListPA.Items.Add(peA.Iniciar());
+            ButtonIniciar.IsEnabled = false;
+            fibo = new Fibonacci();
+            ListFibo.Items.Add(fibo.Iniciar());
+        }
+
+        private void Button_Proximo(object sender, RoutedEventArgs e)
+        {
+            ListPA.Items.Add(peA.Proximo());
+            ListFibo.Items.Add(fibo.Proximo());
         }
     }
+
     class PA
     {
         private int primeiroElemento;
@@ -38,14 +52,33 @@ namespace Ex02
         {
             this.razao = razao;
         }
-        public void Iniciar()
+        public int Iniciar()
         {
             primeiroElemento = 0;
+            return primeiroElemento;
         }
         public int Proximo()
         {
             primeiroElemento += razao;
             return primeiroElemento;
+        }
+    }
+
+    class Fibonacci
+    {
+        private int primeiroElemento = 0;
+        private int proximoElemento = 1, aux = 0;
+        public int Iniciar()
+        {
+            return primeiroElemento;
+        }
+        public int Proximo()
+        {
+            aux = primeiroElemento;
+            primeiroElemento = proximoElemento;
+            proximoElemento += aux;
+            return primeiroElemento;
+
         }
     }
 }
