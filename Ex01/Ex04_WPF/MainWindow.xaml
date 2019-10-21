@@ -1,0 +1,24 @@
+﻿<Window x:Class="Ex04_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ex04_WPF"
+        mc:Ignorable="d"
+        Title="Jogo" Height="450" Width="660">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="8,114,0,0" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Top"/>
+        <TextBox x:Name="nomeJogador" HorizontalAlignment="Left" Height="23" Margin="8,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="145,114,0,0" TextWrapping="Wrap" Text="E-mail" VerticalAlignment="Top"/>
+        <TextBox x:Name="emailJogador" HorizontalAlignment="Left" Height="23" Margin="145,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="281,114,0,0" TextWrapping="Wrap" Text="Pontuação" VerticalAlignment="Top"/>
+        <TextBox x:Name="pontuacaoJogador" HorizontalAlignment="Left" Height="23" Margin="281,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="420,114,0,0" TextWrapping="Wrap" Text="Data" VerticalAlignment="Top"/>
+        <TextBox x:Name="data_Jogador" HorizontalAlignment="Left" Height="23" Margin="420,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Inserir" HorizontalAlignment="Left" Margin="558,135,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="8,21,0,0" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Top"/>
+        <TextBox x:Name="nomeJogo" HorizontalAlignment="Left" Height="23" Margin="8,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Novo Jogo" HorizontalAlignment="Left" Margin="145,42,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
+
+    </Grid>
+</Window>

@@ -17,7 +17,7 @@ namespace Ex03
                 int op = 0;
                 do
                 {
-                    Console.WriteLine($"1: Criar conta bancaria.\n2: Listar contas bancarias de {c.GetNome()}\n3: Deposito.\n4: Saque.");
+                    Console.WriteLine($"1: Criar conta bancaria.\n2: Listar contas bancarias de {c.GetNome()}\n3: Deposito.\n4: Saque.\n0: Sair.");
                     op = int.Parse(Console.ReadLine());
                     if (op == 1)
                     {
@@ -40,8 +40,25 @@ namespace Ex03
                         }
                         Console.WriteLine();
                         Console.WriteLine("Em qual conta deseja fazer deposito?");
-                        ContaBancaria cliente = c.Listar()[int.Parse(Console.ReadLine())];
-                        Console.WriteLine(cliente);
+                        int valor = int.Parse(Console.ReadLine());
+                        Console.WriteLine(c.Listar()[valor]);
+                        Console.WriteLine("Quanto deseja depositar?");
+                        c.Listar()[valor].Despositar(double.Parse(Console.ReadLine()));
+                    }
+                    if(op == 4)
+                    {
+                        int k = 0;
+                        foreach (ContaBancaria a in c.Listar())
+                        {
+                            Console.WriteLine("Conta: " + k++);
+                            Console.WriteLine(a);
+                        }
+                        Console.WriteLine();
+                        Console.WriteLine("Em qual conta deseja fazer sacar?");
+                        int valor = int.Parse(Console.ReadLine());
+                        Console.WriteLine(c.Listar()[valor]);
+                        Console.WriteLine("Quanto deseja sacar?");
+                        c.Listar()[valor].Sacar(double.Parse(Console.ReadLine()));
                     }
                 } while (op != 0);
             }
