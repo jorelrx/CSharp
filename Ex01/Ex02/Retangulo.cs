@@ -11,9 +11,11 @@ namespace Ex02
         private double b, h;
         public Retangulo(double b, double h)
         {
-            if (b > 0) this.b = b;
-            else throw new ArgumentOutOfRangeException();
-            if (h > 0) this.h = h;
+            if (b > 0 && h > 0)
+            {
+                this.b = b;
+                this.h = h;
+            }
             else throw new ArgumentOutOfRangeException();
         }
         public double CalcArea()

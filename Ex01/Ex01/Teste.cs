@@ -14,10 +14,11 @@ namespace Ex01
             return num;
         }
 
-        public void SetNumero(int valor)
+        public int Metodo1(int valor)
         {
             if (valor < 0) throw new Erro();
             else num = valor;
+            return valor;
         }
     }
 }

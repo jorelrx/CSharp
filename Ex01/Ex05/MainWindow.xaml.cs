@@ -24,67 +24,44 @@ namespace Ex05
         {
             InitializeComponent();
         }
-    }
 
-    class Dicionario<K, V>
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+    }
+    namespace Ex05
     {
-        private List<K> chaves = new List<K>();
-        private List<V> valores = new List<V>();
-        public List<K> Chaves
+        class Dicionario<K, V>
         {
-            get
+            private List<K> chaves;
+            private List<V> valores;
+            public List<K> Chaves
             {
-                return chaves;
-            }
-        }
-        public int Count()
-        {
-            return valores.Count;
-        }
-        public V this[K c]
-        {
-            get
-            {
-                if (chaves.IndexOf(c) == -1) throw new InvalidOperationException();
-                else return valores[chaves.IndexOf(c)];
-            }
-            set
-            {
-                if (chaves.IndexOf(c) == -1)
+                get
                 {
-                    chaves.Add(c);
-                    valores.Add(null as List<V>);
+                    return chaves;
                 }
-                else valores[chaves.IndexOf(c)] = value;
             }
-        }
-        public void Add(K chave, V valor)
-        {
-            if (chave == null) throw new ArgumentNullException();
-            else if (chaves.IndexOf(chave) != -1) throw new InvalidOperationException();
-            else
+            public int Count
             {
-                chaves.Add(chave);
-                valores.Add(valor);
+                get
+                {
+                    return valores.Count;
+                }
             }
-        }
-        public void Clear()
-        {
-            chaves.Clear();
-            valores.Clear();
-        }
-        public bool Contains(K chave)
-        {
-            return chaves.Contains(chave);
-        }
-        public bool Remove(K chave)
-        {
-            if (chaves.IndexOf(chave) == -1) return false;
-            else
+            public V this[K chave]
             {
-                chaves.RemoveAt(chaves.IndexOf(chave));
-                valores.RemoveAt(chaves.IndexOf(chave));
-                return true;
+                set
+                {
+
+                }
+                get
+                {
+                    int p = chaves.IndexOf(chave);
+                    if (p == -1) throw new InvalidOperationException();
+                    else return valores[p];
+                }
             }
         }
     }

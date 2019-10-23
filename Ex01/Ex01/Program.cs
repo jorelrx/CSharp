@@ -13,13 +13,15 @@ namespace Ex01
             Teste t = new Teste();
             try
             {
-                t.SetNumero(int.Parse(Console.ReadLine()));
+                t.Metodo1(int.Parse(Console.ReadLine()));
                 Console.WriteLine(t.GetNumero());
-                Console.ReadKey();
             }
             catch (Erro)
             {
                 Console.WriteLine("Valor incorreto");
+            }
+            finally
+            {
                 Console.ReadKey();
             }
         }

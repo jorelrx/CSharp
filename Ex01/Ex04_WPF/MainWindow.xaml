@@ -5,20 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ex04_WPF"
         mc:Ignorable="d"
-        Title="Jogo" Height="450" Width="660">
+        Title="Jogo" Height="393" Width="568">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="8,114,0,0" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Top"/>
-        <TextBox x:Name="nomeJogador" HorizontalAlignment="Left" Height="23" Margin="8,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="145,114,0,0" TextWrapping="Wrap" Text="E-mail" VerticalAlignment="Top"/>
-        <TextBox x:Name="emailJogador" HorizontalAlignment="Left" Height="23" Margin="145,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="281,114,0,0" TextWrapping="Wrap" Text="Pontuação" VerticalAlignment="Top"/>
-        <TextBox x:Name="pontuacaoJogador" HorizontalAlignment="Left" Height="23" Margin="281,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="420,114,0,0" TextWrapping="Wrap" Text="Data" VerticalAlignment="Top"/>
-        <TextBox x:Name="data_Jogador" HorizontalAlignment="Left" Height="23" Margin="420,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Inserir" HorizontalAlignment="Left" Margin="558,135,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="8,84,0,0" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Top"/>
+        <TextBox x:Name="nomeJogador" HorizontalAlignment="Left" Height="23" Margin="8,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="145,84,0,0" TextWrapping="Wrap" Text="E-mail" VerticalAlignment="Top"/>
+        <TextBox x:Name="emailJogador" HorizontalAlignment="Left" Height="23" Margin="145,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="281,84,0,0" TextWrapping="Wrap" Text="Pontuação" VerticalAlignment="Top"/>
+        <TextBox x:Name="pontuacaoJogador" HorizontalAlignment="Left" Height="23" Margin="281,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="420,84,0,0" TextWrapping="Wrap" Text="Data" VerticalAlignment="Top"/>
+        <TextBox x:Name="data_Jogador" HorizontalAlignment="Left" Height="23" Margin="420,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="8,21,0,0" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Top"/>
         <TextBox x:Name="nomeJogo" HorizontalAlignment="Left" Height="23" Margin="8,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Novo Jogo" HorizontalAlignment="Left" Margin="145,42,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
+        <Button Content="Novo Jogo" HorizontalAlignment="Left" Margin="145,42,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="ButtonNewGame_Click"/>
+        <Button Content="Inserir" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="ButtonInserir_Click"/>
+        <Button Content="Listar" HorizontalAlignment="Left" Margin="100,142,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="ButtonListar_Click"/>
+        <Button Content="Top 1" HorizontalAlignment="Left" Margin="190,142,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="ButtonTop1_Click"/>
+        <Button Content="Top 10" HorizontalAlignment="Left" Margin="281,142,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="ButtonTop10_Click"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="159" Margin="10,186,0,0" VerticalAlignment="Top" Width="530"/>
 
     </Grid>
 </Window>

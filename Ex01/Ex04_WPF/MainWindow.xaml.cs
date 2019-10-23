@@ -24,10 +24,32 @@ namespace Ex04_WPF
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        Jogo j;
+        private void ButtonNewGame_Click(object sender, RoutedEventArgs e)
         {
+            j = new Jogo(nomeJogo.Text);
+        }
 
+        private void ButtonInserir_Click(object sender, RoutedEventArgs e)
+        {
+            Jogador jog = new Jogador(nomeJogador.Text, emailJogador.Text);
+            jog.SetPontos(int.Parse(pontuacaoJogador.Text), DateTime.Parse(data_Jogador.Text));
+            j.Inserir(jog);
+        }
+
+        private void ButtonListar_Click(object sender, RoutedEventArgs e)
+        {
+            listBox.ItemsSource = j.Listar();
+        }
+
+        private void ButtonTop1_Click(object sender, RoutedEventArgs e)
+        {
+            listBox.ItemsSource = j.Top1().ToString();
+        }
+
+        private void ButtonTop10_Click(object sender, RoutedEventArgs e)
+        {
+            listBox.ItemsSource = j.Top10().ToString();
         }
     }
 }

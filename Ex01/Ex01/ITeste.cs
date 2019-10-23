@@ -8,6 +8,6 @@ namespace Ex01
 {
     interface ITeste
     {
-        int GetNumero();
+        int Metodo1(int valor);
     }
 }
