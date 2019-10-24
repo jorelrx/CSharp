@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Ex05
 {
-    /// <summary>
-    /// Interação lógica para MainWindow.xam
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -34,8 +31,8 @@ namespace Ex05
     {
         class Dicionario<K, V>
         {
-            private List<K> chaves;
-            private List<V> valores;
+            private List<K> chaves = new List<K>();
+            private List<V> valores = new List<V>();
             public List<K> Chaves
             {
                 get
@@ -54,7 +51,11 @@ namespace Ex05
             {
                 set
                 {
-
+                    if (chaves.IndexOf(chave) == -1)
+                    {
+                        chaves.Add(chave);
+                    }
+                    else valores[chaves.IndexOf(chave)] = value;
                 }
                 get
                 {
@@ -63,6 +64,31 @@ namespace Ex05
                     else return valores[p];
                 }
             }
+            public void Add(K chave, V valor)
+            {
+                if (chave == null) throw new InvalidOperationException();
+                else
+                {
+                    chaves.Add(chave);
+                    valores.Add(valor);
+                }
+            }
+            public void Clear()
+            {
+                chaves.Clear();
+                valores.Clear();
+            }
+            public bool Remove(K chave)
+            {
+                if (chaves.IndexOf(chave) == -1) return false;
+                else
+                {
+                    chaves.RemoveAt(chaves.IndexOf(chave));
+                    valores.RemoveAt(chaves.IndexOf(chave));
+                    return true;
+                }
+            }
+            public bool Contains(K chave) => chaves.Contains(chave);
         }
     }
 }
