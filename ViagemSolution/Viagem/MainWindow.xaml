@@ -11,7 +11,7 @@
         <Label Content="Tempo - h" HorizontalAlignment="Left" Margin="176,19,0,0" VerticalAlignment="Top"/>
         <TextBox Name="d" HorizontalAlignment="Left" Height="23" Margin="35,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="87"/>
         <TextBox Name="t" HorizontalAlignment="Left" Height="23" Margin="176,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="87"/>
-        <Button Content="Calcular" HorizontalAlignment="Left" Height="42" Margin="35,90,0,0" VerticalAlignment="Top" Width="228" Click="Button_Click"/>
+        <Button Content="Calcular" HorizontalAlignment="Left" Height="42" Margin="35,90,0,0" VerticalAlignment="Top" Width="228" Click="Button_Click1"/>
         <Label Content="Velocidade - Km/h" HorizontalAlignment="Left" Margin="35,142,0,0" VerticalAlignment="Top"/>
         <TextBox Name="vel" HorizontalAlignment="Left" Height="23" Margin="35,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="228"/>
 
